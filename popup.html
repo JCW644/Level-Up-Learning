@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title> Level Up Learning </title>
+		<link rel = "stylesheet" href = "button.css">
+		<style>
+			html {
+				/*
+				border: solid;
+				border-color: gray;
+				*/
+			}
+			body {
+				margin: 10px;
+				height: 550px;
+				width: 600px;		
+				background-color: black;
+			}
+			
+			@font-face {
+				font-family: 'custom_font';
+				src: ();
+			}
+			
+			.head {
+				background: #C4C4C4;
+				height: 125px;
+				width: 550px;
+				border-radius: 25px;
+				margin: 0 auto;
+				
+				/* Style settings for title text*/
+				color : blue;
+				text-align: center;
+				line-height: 125px;
+				font-size: 30px;
+			}
+			.buttonarea {
+				margin: 0 auto ;
+				position: absolute;
+				width: 250px;
+				height: 250px;
+				top: 300px;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			
+			.lvl_display {
+				font-family: custom_font;
+			}
+			
+			#exp {
+				position: absolute;
+				font-size: 40px;
+				color: red;	
+				bottom: 70px;
+				width: 100%;
+				text-align: center;
+			}
+			
+			#progress_bar {	
+				position: absolute;
+				bottom: 40px;
+				left: 85px;
+				height: 62px;
+				width: 450px;
+				background: white;
+				border-radius: 25px;	
+			}
+			
+			#progress {
+			
+				height: 62px;
+				background: #009C06;
+				border-radius: 25px;
+				
+				/* Width is variable according to time - popup.js */
+				
+			}
+			
+			#currentlvl {
+				position: absolute;
+				bottom: -10px;
+				left: 30px;
+				color: white;
+			}
+			
+			#nextlvl {
+				position: absolute;
+				bottom: -10px;
+				right: 30px;
+				color: white;
+			}
+			
+			#character {
+				position: absolute;
+				width: 100px;
+				height: 125px;
+				top: 40%;
+				left: 55px;
+			}
+			
+		</style>
+	</head>		
+	<body>
+		<div class = "head">
+			<header> Level Up Learning </header>
+		</div>
+		<hr>		 
+		<div class = "buttonarea">
+			<button id = "achievements"><strong>Achievements</strong></button>
+			<button id = "leaderboard"><strong>Leaderboard</strong></button>
+			<button id = "settings"><strong>Settings</strong></button>
+		</div>
+		<p class = "lvl_display" id = "currentlvl" style="font-size:50px"></p>
+		<p id = "exp"> EXP </p>
+		<div id = "progress_bar">
+			<div id = "progress"></div>
+		</div>
+		<p class = "lvl_display" id = "nextlvl" style="font-size:50px"></p>
+		<img src = "images/image.png" id = "character">
+		
+		<!-- Run the js script after the HTML has been run and items are created -->
+		<script src="popup.js"></script>
+	</body>
+</html>

@@ -1,12 +1,17 @@
 {
-    "manifest_version": 2, 
-    "name": "Level Up Learning",
-    "Description": "+10 Knowledge",
-    "version":"1.0",
-    "icons":{"128": ""},
-    "browser_action": {
-        "default_icon": "",
-        "default_popup": "popup.html"
-    },
-    "permissions": ["activeTab"]
+	"name": "Level Up Learning",
+	"description": "Lvl Up Learning Prototype",
+	"version": "1.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["progress.js"]
+	}],
+	"permissions": ["tabs", "storage", "activeTab", "scripting"],
+	"action": {
+		"default_popup": "popup.html"
+		}
 }
