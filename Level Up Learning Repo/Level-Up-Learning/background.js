@@ -3,9 +3,9 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({lvl: 0}, () => console.log(`Initial level set to 0`));
   chrome.storage.sync.set({exp_points: 0});
   chrome.storage.sync.set({startTime: null});
-  chrome.storage.sync.set({exp_max: 60});
+  chrome.storage.sync.set({exp_max: 3000});
   chrome.storage.sync.set({counting: false});
-  chrome.storage.sync.set({valid_urls: ["www.google.com"]});
+  chrome.storage.sync.set({valid_urls: ["www.google.com", "www.khanacademy.com", "www.desmos.com", "www.wolframalpha.com"]});
   chrome.storage.sync.set({validURL: false});
 });
 

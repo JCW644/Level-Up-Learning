@@ -7,10 +7,10 @@ function update_lvl() {
 
 			if (obj2.exp_points >= obj.exp_max) {
 
-				chrome.storage.sync.set({exp_max: Math.floor((1.2)*(obj.exp_max))}); //Doesn't currently factor in current lvl for exp_max change
 				chrome.storage.sync.set({exp_points: 0});
 				chrome.storage.sync.get('lvl', (obj2) => {
-
+					
+					chrome.storage.sync.set({exp_max: Math.floor((obj2.lvl+1)*(25))});
 					chrome.storage.sync.set({lvl: obj2.lvl + 1});
 
 				})
